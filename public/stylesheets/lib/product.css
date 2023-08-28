@@ -1,0 +1,25 @@
+.main{
+    width: 100%  ;
+    border: 2px solid;
+    display: flex;
+}
+
+.productDetailsContainer{
+    display: flex;
+    overflow: auto;   
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.productImg{
+    width: 150px;
+} 
+
+.pulTag{
+    list-style-type: none;
+    text-align: center;
+    padding: 20px;
+    
+}
+.logoutBtns{
+    display: none;
+}

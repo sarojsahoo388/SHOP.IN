@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/shop.png">
+    <title>INDEX</title>
+    <link rel="stylesheet" href="stylesheets/lib/app.css">
+    <link rel="stylesheet" href="stylesheets/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="stylesheets/lib/product.css">
+<script src="stylesheets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="stylesheets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="javascripts/login.js"></script>
+<script src=" javascripts/axios.min.js"></script>
+<script src="javascripts/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="javascripts/loadProductDetails.js"></script>
+<script></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div><img src="images/shop.png" width="100px">
+      </div>
+      <div>New</div>
+      <div>Accessories</div>
+      <div>Offers</div>
+      <div>Sale</div>
+      <div class="psearch"><input type="search" placeholder="Search Product"></div>
+      <span class="fas fa-search" id="searchh"></span>
+      <div class="loginBtns"><button type="button" class="btn btn-primary" onclick="showLoginDialog()">
+        Log In
+      </button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupDialog">
+        Sign Up
+      </button>
+    </div>
+    <div class="logoutBtns"><button type="button" class="btn btn-primary" onclick="logoutUser()">
+      Log Out
+    </button>
+  </div>
+          </header>
+          <main>
+              
+              </main>
+              <footer>
+                  <div class="details">
+                    <div>
+                      <div>
+                        <h4>SHOP</h4>
+                      </div>
+                      <div>
+                        Gift Cards
+                      </div> 
+                      <div>Store Locator</div>
+                      <div>Refer a Friend</div> 
+                    </div>
+                    <div>
+                      <div><h4>HELP</h4></div>
+                      <div>Contact Us</div>
+                      <div>Accessibility</div>
+                      <div>FAQ</div>
+                    </div>
+                    <div>
+                      <div><h4>ABOUT</h4></div>
+                      <div>Our Story</div>
+                      <div>Wholesale</div>
+                      <div>Careers</div>
+                    </div>
+                    <div>
+                      <div><h4>Sign up to get 10% off your first order</h4></div>
+                      <DIV>
+                          <input type="text" placeholder="Your Email Address" id="email"><span class="sub"><button type="button" class="btn btn-danger">Subscribe</button>
+                            
+                          </span>
+                        </DIV>
+                        <div>Follow Us on : <span><img src="images/instagram.png" width="20px"></span>
+                          <span><img src="images/fscebook.png" width="10px" class="face"></span><span><img src="images/twitter.png" width="22px"></span></div>
+                        </div>
+                      </div>
+                      <div class="bottom">
+                        <div>Terms Of Service</div>
+                        <div>@Copy Rights 2023. All Rights Reserved</div>
+                        <div>Privacy Policy</div>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+
+
+              <!--Login Modal -->
+<div class="modal fade" id="loginDialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>
+              <i class="ri-user-fill"></i>
+              <input type="text" class="form-control" placeholder="    Enter user Id" id="userId">
+          </li>
+          <li>
+              <i class="ri-lock-fill"></i>
+              <input type="password" class="form-control" placeholder="     Enter the password" id="actPassword">
+          </li>
+          <li class="flow">
+              <p><input type="checkbox" class=" mix"> Remember Me</p>
+              <p><a href="#" class="link-light" data-bs-toggle="modal" data-bs-target="#forgetDialog">Forget Password</a></p>
+          </li>
+          <li class="InvalidCredentials">
+               Invalid Credentials... User Id/Password
+          </li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary" onclick="validateUser()">Log in</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SignUp Dialog -->
+
+<div class="modal fade" id="signupDialog" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-8" id="staticBackdropLabel">Register User</h1>
+        <button type="button" class="btn-close clss" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+          <li>
+              <i class="ri-user-fill"></i>
+              <input type="text" class="form-control" placeholder="    Enter user Name">
+          </li>
+          <li>
+              <i class="ri-lock-fill"></i>
+              <input type="password" class="form-control" placeholder="     Enter the password">
+          </li>
+          <li>
+              <i class="ri-lock-fill"></i>
+              <input type="password" class="form-control" placeholder="     Re-Enter Password">
+          </li>
+          <li>
+              <i class="ri-mail-fill"></i>
+              <input type="email" class="form-control" placeholder="      Enter Email">
+          </li>
+          <li>
+              <i class="ri-phone-fill"></i>
+              <input type="number" class="form-control" placeholder="      Enter phone Number">
+          </li>
+          
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary">SignUp</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

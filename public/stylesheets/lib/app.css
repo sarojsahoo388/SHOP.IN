@@ -1,0 +1,119 @@
+.container{
+    width: 1000px;
+    /* height: 900px; */
+}
+header,main{
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 0px;
+    background-color: white;
+
+}
+header{
+    top: 0px;
+    left: 20px;
+    right: 20px;
+    height: 100px;
+    text-shadow: 2px 2px 2px grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.InvalidCredentials{
+    text-align: center;
+    color: red;
+    display: none;
+}
+.psearch input{
+    border-radius: 50px;
+    height: 38px;
+}
+span{
+    color: #FF3371;
+}
+main{
+    top: 100px;
+    left: 20px;
+    right: 20px;
+    /* height: auto; */
+    
+}
+.pimg{
+    display: flex;
+    left: 20px;
+    justify-content: space-between;
+    background-color: white;
+}
+.lpic{
+    width: 200px;
+    margin-top: 20px;
+
+}
+.lpic1{
+    height: 300px;
+}
+.total{
+    left: 20px;
+    right: 20px;
+    top: 100%;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+.puma{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.adi{
+    width: 239px;
+}
+footer{
+    position: absolute;
+background-color: #1e0f41;
+height: 250px;
+left: 20px;
+right: 20px;
+top: 1140px;
+}
+.details{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+    cursor: pointer;
+}
+.email{
+    margin: 10px;
+}
+.sub{
+    margin: 10px;
+}
+.face{
+    margin: 5%;
+}
+.bottom{
+    display: flex;
+    justify-content: space-around;
+    color: rgba(255, 255, 255, 0.599);
+    font-size: 12px;
+    cursor: pointer;
+
+}
+.btn{
+    height: 30px;
+    width: 100px;
+}
+#searchh{
+    position: relative;
+    left: -119px;
+    font-size: 22px;
+    color: #FF3371;
+    z-index: 100;
+}
